@@ -11,8 +11,13 @@ Las dos apps que armamos para el onn 4K (Google TV), listas para instalar.
 
 ## Instalar
 
-1. En la tele: **Configuración → Sistema → Información → Compilación del SO**, apretar OK 7 veces (se activan las opciones de desarrollador). Después **Configuración → Sistema → Opciones de desarrollador → Depuración por USB**: activada.
-2. Desde una compu con `adb` (en la misma red Wi-Fi que la tele):
+1. En la tele: **Configuración → Sistema → Información → Compilación del SO**, apretar OK 7 veces (se activan las opciones de desarrollador). Después **Configuración → Sistema → Opciones de desarrollador → Depuración por USB**: activada. Hace falta aunque no uses compu: Free My TV la usa desde la misma tele para pasar a ser el inicio.
+2. **Sin compu, con Send Files to TV:**
+   - Instalar **Send Files to TV** en la tele (Play Store) y en el celular.
+   - Bajar los APK de este repositorio al celular y mandarlos a la tele con la app.
+   - En la tele, abrir Send Files to TV → el APK. La primera vez pide permiso para **instalar apps desconocidas**: activarlo para Send Files to TV y volver atrás.
+   - Si Google Play Protect avisa: **Más detalles → Instalar de todas formas**.
+3. **O desde una compu con `adb`** (en la misma red Wi-Fi que la tele):
    ```
    adb connect IP_DE_LA_TELE:5555
    adb install -r Nuvio-AppleTV.apk
